@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import Route from './pages/Route';
 import CalendarPage from './pages/CalendarPage';
+import MonitorExpired from './pages/MonitorExpired';
 import './App.css';
 
 const App = () => {
@@ -130,6 +131,8 @@ const App = () => {
             <Route />
           ) : activePage === 'calendar' ? (
             <CalendarPage />
+          ) : activePage === 'monitor-expired' ? (
+            <MonitorExpired />
           ) : activePage === 'settings' ? (
             <div className="settings-page">
               <div className="settings-header">

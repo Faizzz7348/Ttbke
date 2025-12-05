@@ -1,0 +1,238 @@
+.calendar-page {
+  padding: 0;
+}
+
+.calendar-header {
+  margin-bottom: 32px;
+}
+
+.calendar-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.calendar-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.calendar-container {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  margin-bottom: 24px;
+}
+
+/* FullCalendar Custom Styles */
+.fc {
+  font-family: inherit;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.fc .fc-button {
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.fc .fc-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.fc .fc-button:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.fc .fc-button-active {
+  background-color: var(--accent-hover) !important;
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: var(--border-color);
+  opacity: 0.6;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: var(--border-color);
+}
+
+.fc .fc-col-header-cell {
+  background-color: var(--bg-secondary);
+  padding: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.fc .fc-daygrid-day {
+  background-color: var(--card-bg);
+  transition: all 0.2s ease;
+}
+
+.fc .fc-daygrid-day:hover {
+  background-color: var(--bg-secondary);
+  cursor: pointer;
+}
+
+.fc .fc-daygrid-day-number {
+  color: var(--text-primary);
+  padding: 8px;
+  font-weight: 500;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+  background-color: var(--accent);
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+}
+
+.fc .fc-event {
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.fc .fc-event:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.fc .fc-event-title {
+  font-weight: 600;
+}
+
+.fc .fc-timegrid-slot {
+  height: 3em;
+  border-color: var(--border-color);
+}
+
+.fc .fc-timegrid-slot-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.fc .fc-scrollgrid {
+  border-color: var(--border-color);
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+.fc-direction-rtl .fc-daygrid-event.fc-event-start {
+  margin-right: 2px;
+}
+
+/* Info Card */
+.calendar-info {
+  margin-top: 24px;
+}
+
+.info-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.info-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-card li {
+  padding: 12px 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 16px;
+  }
+
+  .fc .fc-toolbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 20px;
+  }
+
+  .fc .fc-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .calendar-header h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fc .fc-toolbar-title {
+    font-size: 18px;
+  }
+
+  .fc .fc-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .info-card {
+    padding: 16px;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+  }
+
+  .info-card li {
+    font-size: 14px;
+  }
+}
